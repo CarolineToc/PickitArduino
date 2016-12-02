@@ -1,7 +1,8 @@
+#include "Cottonwood.h"
+#include <aJSON.h>
 #include <SPI.h>
-
-//change the following line to #include <Ethernet.h> to use the eithent shield
 #include <Ethernet.h>
+
 
 //#define DHCP
 // Enter a MAC address for your controller below.
@@ -31,34 +32,62 @@ EthernetClient client;
 
 char c ;
 int Nb_sent = 0;
+aJsonObject *root, *fmt;
+String json_String ;
 
 void setup() {
+  
+  root = aJson.createObject();
 
   //set up Ethernet:
   Serial.begin(9600);
   setupEthernet();
+  	aJson.addItemToObject(root, "name", aJson.createItem("Pepito"));
+  	aJson.addStringToObject(root, "Surname", "De lu");
+  	aJson.addNumberToObject(root, "RFID", 185);
+  	aJson.addNumberToObject(root, "nb_sent", 12);
+	  
+	  	json_String=aJson.print(root);
+  	
+  	
 }
 
 void loop() {
+	// Building Json file
 
-    httpRaspPI ();
-	Serial.println(Nb_sent++);
-	delay(1000);
+	// converting to string
+
+	if (Serial.available()) {
+		if (Serial.read()=='a') {
+			Serial.println(json_String);
+	
+			httpRaspPI ();
+			Serial.println(Nb_sent++);
+		}
+	}
 }
 
 
 void httpRaspPI (){
   if (client.connect(server, 1880))
   {
-    Serial.println("Getting data from Raspberry");
+    Serial.println("Posting data to Raspberry");
 	// POST 192.168.0.11:1880/PickIT
 
-    client.print("POST /PickIT");
+    client.print("POST /pickit");
     client.println(" HTTP/1.1");
     client.print("Host: ");
     client.println(ipRPi);
     client.println("Connection: close");
-    client.println(); 
+    client.print("Content-Length: ");
+	//client.println(5);
+    client.println(json_String.length());
+	//client.println(20);
+	client.println("Content-Type: application/x-www-form-urlencoded");
+	client.println();
+	//client.println("hello");
+    client.println(json_String);
+	//client.println();
   }   
   else
   {
@@ -75,7 +104,7 @@ void httpRaspPI (){
       Serial.print(c);
     }      
   }
-  Serial.println();
+  Serial.println(" Fin de reception ");
   client.stop();   
 }
 
@@ -89,7 +118,7 @@ void setupEthernet()
   if (Ethernet.begin(mac) == 0) {
     Serial.println(F("Failed to configure Ethernet using DHCP"));
     // no point in carrying on, so do nothing forevermore:
-    // try to congifure using IP address instead of DHCP:
+    // try to configure using IP address instead of DHCP:
     Ethernet.begin(mac, ip);
   }
 #else
