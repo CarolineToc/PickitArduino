@@ -21,6 +21,8 @@ IPAddress ip(192, 168, 0, 10);
 IPAddress ipRPi(192,168,0,11);
 
 byte server[] = { 192 , 168, 0 ,11 };
+	
+
 
 // Initialize the Ethernet server library
 // with the IP address and port you want to use
@@ -36,6 +38,7 @@ void setup() {
 
   //set up Ethernet:
   Serial.begin(9600);
+  SerialRFID.begin(115200);
   setupEthernet();
 }
 

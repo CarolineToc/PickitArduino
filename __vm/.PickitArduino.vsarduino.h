@@ -19,7 +19,6 @@
 #define ARDUINO 106012
 #define ARDUINO_AVR_UNO
 #define ARDUINO_ARCH_AVR
- #include <VM_DBG.h>
 
 //
 //
