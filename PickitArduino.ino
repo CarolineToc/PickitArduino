@@ -1,7 +1,10 @@
+#include "DRV_Cottonwood.h"
+#include <SoftwareSerial.h>
 #include <SPI.h>
-
-//change the following line to #include <Ethernet.h> to use the eithent shield
 #include <Ethernet.h>
+#include "Cottonwood.h"
+
+
 
 //#define DHCP
 // Enter a MAC address for your controller below.
@@ -31,6 +34,8 @@ byte server[] = { 192 , 168, 0 ,11 };
 // Initialize the Ethernet client library
 EthernetClient client;
 
+
+
 char c ;
 int Nb_sent = 0;
 
@@ -38,7 +43,7 @@ void setup() {
 
   //set up Ethernet:
   Serial.begin(9600);
-  SerialRFID.begin(115200);
+  //Serial1.begin(115200);
   setupEthernet();
 }
 
