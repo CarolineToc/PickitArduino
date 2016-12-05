@@ -27,7 +27,7 @@ RFID_Reader::RFID_Reader(int RX, int TX) : SerialRFID(RX,TX)
  * @return (type)
  */
 void RFID_Reader::Receive_data (byte* buffer) {
-	int index = 1;
+	int index = 0;
 	
 	while(SerialRFID.available()){
 		buffer[index]=SerialRFID.read();
@@ -50,6 +50,8 @@ void RFID_Reader::Send_data(byte* buffer, int length){
 int index = 0 ;
 	while (index != length) {
 		SerialRFID.println(buffer[index]);
+		Serial.print("Data sent is : "); 
+		Serial.println(buffer[index],HEX);
 		index++;
 	}
 	

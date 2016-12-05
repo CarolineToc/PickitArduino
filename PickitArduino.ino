@@ -24,6 +24,8 @@ IPAddress ip(192, 168, 0, 10);
 IPAddress ipRPi(192,168,0,11);
 
 byte server[] = { 192 , 168, 0 ,11 };
+
+byte Data_to_send[] = {0xA3, 0xBC, 0xD9};
 	
 
 
@@ -34,6 +36,7 @@ byte server[] = { 192 , 168, 0 ,11 };
 // Initialize the Ethernet client library
 EthernetClient client;
 
+RFID_Reader UHF_Cottonwood = RFID_Reader(10,11);
 
 
 char c ;
@@ -44,14 +47,15 @@ void setup() {
   //set up Ethernet:
   Serial.begin(9600);
   //Serial1.begin(115200);
-  setupEthernet();
+  //setupEthernet();
 }
 
 void loop() {
-
-    httpRaspPI ();
-	Serial.println(Nb_sent++);
-	delay(1000);
+	if ((Serial.available()) & (Serial.read()=='a') ){
+		Serial.println("Preparing to send data...");
+		UHF_Cottonwood.Send_data(Data_to_send, sizeof(Data_to_send)/sizeof(byte));
+		Serial.println("Data has been sent");
+	}
 }
 
 
