@@ -31,7 +31,8 @@ void RFID_Reader::Receive_data (byte* buffer) {
 	
 	while(SerialRFID.available()){
 		buffer[index]=SerialRFID.read();
-		Serial.print(buffer[index]);
+		Serial.print(buffer[index]); // print the received value into the serial
+		index++;
 	}
 		
 }
