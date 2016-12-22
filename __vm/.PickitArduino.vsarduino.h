@@ -19,12 +19,11 @@
 #define ARDUINO 106012
 #define ARDUINO_AVR_UNO
 #define ARDUINO_ARCH_AVR
+ #include <VM_DBG.h>
 
 //
 //
-void httpRaspPI ();
-void setupEthernet();
-String URLEncode(const char* msg);
+void Display_buffer (byte *buffer);
 
 #include "pins_arduino.h" 
 #include "arduino.h"

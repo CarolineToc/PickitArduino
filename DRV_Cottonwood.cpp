@@ -15,6 +15,8 @@
  */
 RFID_Reader::RFID_Reader(int RX, int TX) : SerialRFID(RX,TX) 
 {
+	
+	SerialRFID.begin(9600);
 }
 
 /*
@@ -28,12 +30,13 @@ RFID_Reader::RFID_Reader(int RX, int TX) : SerialRFID(RX,TX)
  */
 void RFID_Reader::Receive_data (byte* buffer) {
 	int index = 0;
-	
-	while(SerialRFID.available()){
-		buffer[index]=SerialRFID.read();
-		Serial.print(buffer[index]); // print the received value into the serial
-		index++;
-	}
+		while(SerialRFID.available()){
+			Serial.println("Receiving data");
+			//buffer[index]=SerialRFID.read();
+			Serial.print(SerialRFID.read(),HEX); // print the received value into the serial
+			//index++;
+		}
+	Serial.println("End of reception");
 		
 }
 
@@ -49,9 +52,8 @@ void RFID_Reader::Receive_data (byte* buffer) {
 void RFID_Reader::Send_data(byte* buffer, int length){
 int index = 0 ;
 	while (index != length) {
-		SerialRFID.println(buffer[index]);
-		Serial.print("Data sent is : "); 
-		Serial.println(buffer[index],HEX);
+		SerialRFID.write(buffer[index]);
+		Serial.print(buffer[index],HEX);
 		index++;
 	}
 	
