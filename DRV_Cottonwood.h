@@ -32,13 +32,13 @@ class RFID_Reader
 {
 	public :
 	RFID_Reader(int RX, int TX);
-	void Receive_data (byte* buffer); // fulfill the buffer with the received information from rfid reader
+	byte * Receive_data (void); // fulfill the buffer with the received information from rfid reader
 	void Send_data (byte* buffer, int length); // send data in buffer to rfid reader
 
-	void Change_antenna_power (byte cmd); // cmd 0x00(OFF) or 0xFF(ON)
+	void Set_antenna_power (byte cmd); // cmd 0x00(OFF) or 0xFF(ON)
 	void Write_register (byte Address, byte Data);
 	void Read_register (byte Address, byte* Data); // store read data in Data
-	void Set_frequency (long int freq);
+	void Set_frequency (void);
 	void Set_RSSI_threshold(byte value); // generally 0xD8 for -40dBm
 	//void Set_GEN2() p15
 
