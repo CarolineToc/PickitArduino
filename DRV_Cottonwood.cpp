@@ -28,27 +28,37 @@ RFID_Reader::RFID_Reader(int RX, int TX) : SerialRFID(RX,TX)
  * @param (type) about this param
  * @return (type)
  */
-byte * RFID_Reader::Receive_data (void) {
-	byte * buffer;
+void RFID_Reader::Receive_data_inventory (byte *& buffer) {
 	int index = 0;
-	byte aux ;
-	byte aux2;
+	byte aux[3];
+	int length ;
+	
 		while(SerialRFID.available()){
 			if (index == 0) {
-				aux = SerialRFID.read();
+				aux[0] = SerialRFID.read();
 			}
 			else if (index == 1) {
-				buffer = new byte [aux2=SerialRFID.read()]; //frame length
-				buffer[0]=aux;
-				buffer[1]=aux2; 
+				aux[1]=SerialRFID.read();
+			}
+			else if (index == 2) {
+				Serial.println(aux[1]);
+				aux[2]=SerialRFID.read();
+				Serial.println(aux[2]);
+				length = aux[1]*aux[2];
+				Serial.println(length);
+				buffer = new byte [length]; //frame length
+				buffer[0]=aux[0];
+				buffer[1]=aux[1];
+				buffer[2]=aux[2];
+				Serial.println(length);			
 			}
 			else {
 				Serial.println(buffer[index]=SerialRFID.read(),HEX);				
 			}
 			index++;
 		}
+	nb_tag = buffer [2] ;
 	Serial.println("End of reception");
-	return buffer;
 		
 }
 
@@ -107,8 +117,19 @@ void RFID_Reader::Set_frequency (void){
  * @param (type) about this param
  * @return (type)
  */
-void RFID_Reader::Start_inventory(void){
-	byte Data_to_send[] = {0x31,0x03,0x01};
+void RFID_Reader::Start_inventory(byte cmd){
+	byte Data_to_send[] = {0x43,0x03,cmd};
 	this->Send_data(Data_to_send,3);
 	
+}
+
+void RFID_Reader::Display_incoming(){
+	while (SerialRFID.available()) {
+		Serial.print(SerialRFID.read(),HEX);
+		Serial.print(",");
+	}
+}
+
+int RFID_Reader::Get_nb_tag(){
+	return nb_tag ;
 }

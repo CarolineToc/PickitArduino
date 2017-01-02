@@ -28,11 +28,19 @@
 #define ID_INVENTORY_RSSI 0x31
 #define ID_INVENTORY_RSSI_RESPONSE 0x32
 
+#define START_INV 0x01 
+#define NEXT_TAG 0x02
+#define LENGTH_TAG 12
+#define LENGTH_FRAME_INVENTORY 22
+#define OFFSET_TAG 10
+
+
 class RFID_Reader
 {
 	public :
 	RFID_Reader(int RX, int TX);
-	byte * Receive_data (void); // fulfill the buffer with the received information from rfid reader
+	void Receive_data (byte *& buffer); // fulfill the buffer with the received information from rfid reader
+	void Receive_data_inventory (byte *& buffer);
 	void Send_data (byte* buffer, int length); // send data in buffer to rfid reader
 
 	void Set_antenna_power (byte cmd); // cmd 0x00(OFF) or 0xFF(ON)
@@ -41,14 +49,18 @@ class RFID_Reader
 	void Set_frequency (void);
 	void Set_RSSI_threshold(byte value); // generally 0xD8 for -40dBm
 	//void Set_GEN2() p15
+	void Display_incoming(void);
 
 	//TODO :  find a way to get the answer
-	void Start_inventory(void);
+	void Start_inventory(byte cmd);
 	void Get_all_tags (void);
+	
+	int Get_nb_tag (void);
 	
 	
 	private : 
 	SoftwareSerial SerialRFID; 
+	int nb_tag;
 
 };
 

@@ -19,11 +19,13 @@
 #define ARDUINO 106012
 #define ARDUINO_AVR_UNO
 #define ARDUINO_ARCH_AVR
- #include <VM_DBG.h>
 
 //
 //
-void Display_buffer (byte *buffer);
+void Display_buffer_inventory (byte *buffer);
+void Display_buffer_tag (byte *buffer);
+byte * Find_tag (byte *buffer, int nb);
+String buffer_to_string (byte *buffer, int length);
 
 #include "pins_arduino.h" 
 #include "arduino.h"
