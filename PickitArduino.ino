@@ -1,4 +1,6 @@
-#include "EthernetRaspPI.h"
+#include "JsonMessage.h"
+#include "EthernetRPI.h"
+//#include "EthernetRaspPI.h"
 #include "Cottonwood.h"
 #include <aJSON.h>
 #include <SPI.h>
@@ -7,23 +9,23 @@
 
 char c ;
 int Nb_sent = 0;
-aJsonObject *root, *fmt;
+//aJsonObject *root, *fmt;
 String json_String ;
 EthernetRaspPi MyEthernet = EthernetRaspPi();
+JsonMessage MyMessage = JsonMessage();
 
 void setup() {
-  
-  root = aJson.createObject();
+
 
   //set up Ethernet:
-  Serial.begin(9600);
-  MyEthernet.setupEthernet();
-  	aJson.addItemToObject(root, "name", aJson.createItem("Pepito"));
-  	aJson.addStringToObject(root, "Surname", "De lu");
-  	aJson.addNumberToObject(root, "RFID", 185);
-  	aJson.addNumberToObject(root, "nb_sent", 12);
-	  
-	  	json_String=aJson.print(root);	
+	 Serial.begin(9600);
+	//MyEthernet.setupEthernet();
+
+	MyMessage.Add_in_json("12 45 78 ");
+	MyMessage.Add_in_json("45 56 89 ");
+	MyMessage.Build_message();
+	json_String=MyMessage.Convert_json_to_string();
+	Serial.println(json_String);
   	
 }
 
@@ -35,7 +37,7 @@ void loop() {
 	if (Serial.available()) {
 		if (Serial.read()=='a') {
 			Serial.println(json_String);
-			MyEthernet.Send_data_to_rpi(json_String);
+			//MyEthernet.Send_data_to_rpi(json_String);
 			Serial.println(Nb_sent++);
 		}
 	}
