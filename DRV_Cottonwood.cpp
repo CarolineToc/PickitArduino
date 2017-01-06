@@ -57,7 +57,6 @@ void RFID_Reader::Receive_data_inventory (byte *& buffer) {
 			}
 			index++;
 		}
-	nb_tag = buffer [2] ;
 	Serial.println("End of reception");
 		
 }
@@ -118,18 +117,23 @@ void RFID_Reader::Set_frequency (void){
  * @return (type)
  */
 void RFID_Reader::Start_inventory(byte cmd){
-	byte Data_to_send[] = {0x43,0x03,cmd};
+	byte Data_to_send[] = {ID_INVENTORY_RSSI,0x03,cmd};
 	this->Send_data(Data_to_send,3);
 	
 }
 
+/*
+ * Display_incoming
+ *
+ * Display icoming data from the Serial  
+ * with a simple while loop
+ *
+ * @param (type) about this param
+ * @return (type)
+ */
 void RFID_Reader::Display_incoming(){
 	while (SerialRFID.available()) {
 		Serial.print(SerialRFID.read(),HEX);
 		Serial.print(",");
 	}
-}
-
-int RFID_Reader::Get_nb_tag(){
-	return nb_tag ;
 }

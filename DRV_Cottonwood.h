@@ -25,14 +25,12 @@
 #define ID_SET_GEN2_RESPONSE 0x5A
 #define ID_INVENTORY 0x31
 #define ID_INVENTORY_RESPONSE 0x32
-#define ID_INVENTORY_RSSI 0x31
-#define ID_INVENTORY_RSSI_RESPONSE 0x32
+#define ID_INVENTORY_RSSI 0x43
+#define ID_INVENTORY_RSSI_RESPONSE 0x44
 
 #define START_INV 0x01 
 #define NEXT_TAG 0x02
-#define LENGTH_TAG 12
-#define LENGTH_FRAME_INVENTORY 22
-#define OFFSET_TAG 10
+
 
 
 class RFID_Reader
@@ -54,13 +52,11 @@ class RFID_Reader
 	//TODO :  find a way to get the answer
 	void Start_inventory(byte cmd);
 	void Get_all_tags (void);
-	
-	int Get_nb_tag (void);
+
 	
 	
 	private : 
 	SoftwareSerial SerialRFID; 
-	int nb_tag;
 
 };
 
