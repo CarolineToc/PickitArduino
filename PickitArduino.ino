@@ -57,7 +57,7 @@ void loop() {
 		}
 		else if (aux =='b') {
 			Serial.println("Preparing to send data...");			
-			UHF_Cottonwood.Start_inventory(START_INV);
+			UHF_Cottonwood.Set_frequency();
 			Serial.println("Data has been sent");
 			delay (1000);
 			UHF_Cottonwood.Display_incoming();		
