@@ -45,15 +45,15 @@ void RFID_Reader::Receive_data_inventory (byte *& buffer) {
 				aux[2]=SerialRFID.read();
 				Serial.println(aux[2]);
 				length = aux[1]*aux[2];
-				Serial.println(length);
+				//Serial.println(length);
 				buffer = new byte [length]; //frame length
 				buffer[0]=aux[0];
 				buffer[1]=aux[1];
 				buffer[2]=aux[2];
-				Serial.println(length);			
+				//Serial.println(length);			
 			}
 			else {
-				Serial.println(buffer[index]=SerialRFID.read(),HEX);				
+				buffer[index]=SerialRFID.read();				
 			}
 			index++;
 		}

@@ -68,11 +68,7 @@
       <Value>../_micro-api/libraries/SoftwareSerial/src</Value>
       <Value>../_micro-api/libraries/SPI/src</Value>
       <Value>../_micro-api/libraries/Ethernet/src</Value>
-      <Value>../_micro-api/libraries/aJson</Value>
-      <Value>../_micro-api/libraries/aJson/utility</Value>
       <Value>../_micro-api/libraries/Ethernet/src/utility</Value>
-      <Value>../_micro-api/libraries/RobotIRremote/src</Value>
-      <Value>../_micro-api/libraries/RobotIRremote/src/utility</Value>
       <Value>../_micro-api/libraries/SoftwareSerial/src/utility</Value>
       <Value>../_micro-api/libraries/SPI/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -81,6 +77,8 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard</Value>
       <Value>../../../PickitArduino</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers/VM_DBG</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
@@ -111,11 +109,7 @@
       <Value>../_micro-api/libraries/SoftwareSerial/src</Value>
       <Value>../_micro-api/libraries/SPI/src</Value>
       <Value>../_micro-api/libraries/Ethernet/src</Value>
-      <Value>../_micro-api/libraries/aJson</Value>
-      <Value>../_micro-api/libraries/aJson/utility</Value>
       <Value>../_micro-api/libraries/Ethernet/src/utility</Value>
-      <Value>../_micro-api/libraries/RobotIRremote/src</Value>
-      <Value>../_micro-api/libraries/RobotIRremote/src/utility</Value>
       <Value>../_micro-api/libraries/SoftwareSerial/src/utility</Value>
       <Value>../_micro-api/libraries/SPI/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -124,6 +118,8 @@
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard</Value>
       <Value>../../../PickitArduino</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers/VM_DBG</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
@@ -145,7 +141,7 @@
     <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/libraries/Ethernet/src;C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src/utility;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/User/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard;../../../PickitArduino;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers/VM_DBG;C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers;C:/Users/User/Documents/Arduino/libraries/aJson;C:/Users/User/Documents/Arduino/libraries/aJson/utility;../_micro-api/libraries/aJson;../_micro-api/libraries/SPI/src;../_micro-api/libraries/Ethernet/src;../_micro-api/libraries/aJson/utility;../_micro-api/libraries/Ethernet/src/utility;../_micro-api/libraries/SPI/src/utility;C:/Users/User/AppData/Local/Temp/VMicroBuilds/PickitArduino/uno/src/_micro-api/libraries/aJson/utility;../_micro-api/libraries/Ethernet;../_micro-api/libraries/Ethernet/utility;../_micro-api/libraries/SPI;../_micro-api/libraries/SPI/utility;../_micro-api/libraries/SoftwareSerial/src;../_micro-api/libraries/SoftwareSerial/src/utility;../_micro-api/libraries/RobotIRremote/src;../_micro-api/libraries/RobotIRremote/src/utility;../_micro-api/libraries/RobotIRremote;../_micro-api/libraries/RobotIRremote/utility;../_micro-api/libraries/SoftwareSerial;../_micro-api/libraries/SoftwareSerial/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.upload.port>COM4</arduino.upload.port>
+        <arduino.upload.port>COM3</arduino.upload.port>
         <arduino.board.name>uno</arduino.board.name>
         <arduino.board.desc>Arduino/Genuino Uno</arduino.board.desc>
         <arduino.board.property_bag>name=Arduino/Genuino Uno
@@ -420,11 +416,7 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
       <Value>../_micro-api/libraries/SoftwareSerial/src</Value>
       <Value>../_micro-api/libraries/SPI/src</Value>
       <Value>../_micro-api/libraries/Ethernet/src</Value>
-      <Value>../_micro-api/libraries/aJson</Value>
-      <Value>../_micro-api/libraries/aJson/utility</Value>
       <Value>../_micro-api/libraries/Ethernet/src/utility</Value>
-      <Value>../_micro-api/libraries/RobotIRremote/src</Value>
-      <Value>../_micro-api/libraries/RobotIRremote/src/utility</Value>
       <Value>../_micro-api/libraries/SoftwareSerial/src/utility</Value>
       <Value>../_micro-api/libraries/SPI/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -433,6 +425,8 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard</Value>
       <Value>../../../PickitArduino</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers/VM_DBG</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
@@ -463,11 +457,7 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
       <Value>../_micro-api/libraries/SoftwareSerial/src</Value>
       <Value>../_micro-api/libraries/SPI/src</Value>
       <Value>../_micro-api/libraries/Ethernet/src</Value>
-      <Value>../_micro-api/libraries/aJson</Value>
-      <Value>../_micro-api/libraries/aJson/utility</Value>
       <Value>../_micro-api/libraries/Ethernet/src/utility</Value>
-      <Value>../_micro-api/libraries/RobotIRremote/src</Value>
-      <Value>../_micro-api/libraries/RobotIRremote/src/utility</Value>
       <Value>../_micro-api/libraries/SoftwareSerial/src/utility</Value>
       <Value>../_micro-api/libraries/SPI/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -476,6 +466,8 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard</Value>
       <Value>../../../PickitArduino</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers/VM_DBG</Value>
+      <Value>C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
@@ -497,7 +489,7 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
     <VMSETTING_IncludePaths>C:/Program Files (x86)/Arduino/libraries/Ethernet/src;C:/Program Files (x86)/Arduino/libraries/Ethernet/src/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SPI/src/utility;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/User/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard;../../../PickitArduino;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr//avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers/VM_DBG;C:/Program Files (x86)/Atmel/Studio/7.0/Extensions/lm0ie4qq.fes/Micro Platforms/default/debuggers;C:/Users/User/Documents/Arduino/libraries/aJson;C:/Users/User/Documents/Arduino/libraries/aJson/utility;../_micro-api/libraries/aJson;../_micro-api/libraries/SPI/src;../_micro-api/libraries/Ethernet/src;../_micro-api/libraries/aJson/utility;../_micro-api/libraries/Ethernet/src/utility;../_micro-api/libraries/SPI/src/utility;C:/Users/User/AppData/Local/Temp/VMicroBuilds/PickitArduino/uno/src/_micro-api/libraries/aJson/utility;../_micro-api/libraries/Ethernet;../_micro-api/libraries/Ethernet/utility;../_micro-api/libraries/SPI;../_micro-api/libraries/SPI/utility;../_micro-api/libraries/SoftwareSerial/src;../_micro-api/libraries/SoftwareSerial/src/utility;../_micro-api/libraries/RobotIRremote/src;../_micro-api/libraries/RobotIRremote/src/utility;../_micro-api/libraries/RobotIRremote;../_micro-api/libraries/RobotIRremote/utility;../_micro-api/libraries/SoftwareSerial;../_micro-api/libraries/SoftwareSerial/utility;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.upload.port>COM4</arduino.upload.port>
+        <arduino.upload.port>COM3</arduino.upload.port>
         <arduino.board.name>uno</arduino.board.name>
         <arduino.board.desc>Arduino/Genuino Uno</arduino.board.desc>
         <arduino.board.property_bag>name=Arduino/Genuino Uno
@@ -801,13 +793,19 @@ vmresolved.tools.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
     <Folder Include="__vm\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DRV_Cottonwood.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="DRV_Cottonwood.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="EthernetRaspPI.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\DRV_Cottonwood.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\DRV_Cottonwood.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\MessageReceivedTag.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\MessageReceivedTag.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\_micro-api\libraries\aJson\aJSON.cpp">
