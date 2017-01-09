@@ -23,9 +23,6 @@
 
 //
 //
-void httpRaspPI ();
-void setupEthernet();
-String URLEncode(const char* msg);
 
 #include "pins_arduino.h" 
 #include "arduino.h"
