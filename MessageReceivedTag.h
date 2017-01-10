@@ -23,9 +23,10 @@ class MessageReceivedTag
 		byte * Data_received;
 		
 		MessageReceivedTag();
+		~MessageReceivedTag();
 		void Display_buffer_inventory (byte *buffer);
 		void Display_buffer_tag (byte *buffer);
-		byte * Find_tag (int num);
+		void Find_tag (int num, byte *& tag);
 		String buffer_to_string (byte *buffer, int length);
 		int Get_nb_tags(void);
 		int Analyse_buffer(byte *buffer);

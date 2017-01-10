@@ -3,6 +3,7 @@
 // 
 
 #include "DRV_Cottonwood.h"
+#include "MemoryFree.h"
 
 /*
  * Constructor RFID_Reader
@@ -43,22 +44,21 @@ void RFID_Reader::Receive_data_inventory (byte *& buffer) {
 			else if (index == 2) {
 				Serial.println(aux[1]);
 				aux[2]=SerialRFID.read();
-				Serial.println(aux[2]);
 				length = aux[1]*aux[2];
-				Serial.println(length);
+				Serial.println(freeMemory());
 				buffer = new byte [length]; //frame length
+				Serial.println(freeMemory());
 				buffer[0]=aux[0];
 				buffer[1]=aux[1];
-				buffer[2]=aux[2];
-				Serial.println(length);			
+				buffer[2]=aux[2];			
 			}
 			else {
-				Serial.println(buffer[index]=SerialRFID.read(),HEX);				
+				buffer[index]=SerialRFID.read();			
 			}
 			index++;
 		}
-	Serial.println("End of reception");
-		
+	Serial.println(F("End of reception"));
+	
 }
 
 /*
@@ -74,7 +74,6 @@ void RFID_Reader::Send_data(byte* buffer, int length){
 int index = 0 ;
 	while (index != length) {
 		SerialRFID.write(buffer[index]);
-		Serial.print(buffer[index],HEX);
 		index++;
 	}
 	

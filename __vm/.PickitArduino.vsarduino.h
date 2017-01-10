@@ -23,6 +23,7 @@
 
 //
 //
+String maintoString(byte *buffer, int length);
 
 #include "pins_arduino.h" 
 #include "arduino.h"

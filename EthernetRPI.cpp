@@ -4,7 +4,7 @@
 
 #include "EthernetRPI.h"
 
-EthernetRaspPi::EthernetRaspPi() : gateway(192, 128, 0, 1), subnet(255, 255, 0, 0), ip(192, 168, 0, 10), ipRPi(192,168,0,11)
+EthernetRaspPi::EthernetRaspPi() : gateway(192, 168, 0, 1), subnet(255, 255, 0, 0), ip(192, 168, 0, 10), ipRPi(192,168,0,11)
 {
 }
 

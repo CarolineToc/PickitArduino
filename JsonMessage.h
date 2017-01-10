@@ -6,6 +6,7 @@
 #if defined(ARDUINO) && ARDUINO >= 100
 	#include "arduino.h"
 	#include <aJSON.h>
+	#include "MemoryFree.h"
 #else
 	#include "WProgram.h"
 #endif
@@ -18,7 +19,8 @@ class JsonMessage {
 	
 	public:
 	JsonMessage (); // Constructor
-	void Add_in_json(char * data);
+	~JsonMessage(); //Destructor
+	void JsonMessage::Add_in_json(String data);
 	String Convert_json_to_string ();
 	void JsonMessage::Build_message(void);
 
