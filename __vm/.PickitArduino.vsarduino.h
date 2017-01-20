@@ -19,11 +19,9 @@
 #define ARDUINO 106012
 #define ARDUINO_AVR_UNO
 #define ARDUINO_ARCH_AVR
- #include <VM_DBG.h>
 
 //
 //
-String maintoString(byte *buffer, int length);
 
 #include "pins_arduino.h" 
 #include "arduino.h"
