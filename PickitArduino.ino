@@ -74,5 +74,12 @@ void loop() {
 			}
 
 		}
+		if (Serial.available()) {
+			if (Serial.read() == 'a'){
+				UHF_Cottonwood.Set_antenna_power(0xFF);
+				UHF_Cottonwood.Set_frequency();
+				Serial.println("Changement bien fait");
+			}
+		}
 }
 
